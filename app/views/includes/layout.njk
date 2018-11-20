@@ -2,21 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Node.js boilerplate</title>
+
+    <title>NHS.UK Frontend boilerplate</title>
 
     <meta name="author" content="https://github.com/AdamChrimes">
-    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Node.js boilerplate" />
+    <meta name="description" content="NHS.UK Frontend boilerplate" />
 
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="icon" sizes="32x32" type="image/png" href="/images/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico"><![endif]-->
+    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" href="/nhsuk-frontend/assets/favicons/favicon.png">
 
     <link rel="stylesheet" href="/css/main.min.css">
   </head>
 
   <body>
+    {% include 'includes/header.njk' %}
+
     {% block body %}{% endblock %}
+
+    {% include 'includes/footer.njk' %}
   </body>
 
 </html>

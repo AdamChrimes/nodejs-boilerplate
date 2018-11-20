@@ -5,7 +5,9 @@ var cleanCSS = require('gulp-clean-css');
 
 function styles() {
   return gulp.src('app/styles/**/*.scss')
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: 'node_modules'
+    }))
     .pipe(cleanCSS())
     .pipe(rename({
       suffix: '.min'
@@ -21,6 +23,8 @@ function watch() {
   gulp.watch('app/styles/**/*.scss', styles);
 }
 
+exports.styles = styles;
 exports.watch = watch;
 
 gulp.task('default', watch);
+gulp.task('styles', styles);

@@ -6,12 +6,14 @@
   "scripts": {
     "start": "node app",
     "test": "",
+    "prewatch": "gulp styles",
     "watch": "concurrently \"gulp\" \"nodemon -e js,njk,scss --watch app\""
   },
   "author": "https://github.com/AdamChrimes",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
+    "nhsuk-frontend": "^0.1.4",
     "nunjucks": "^3.1.4",
     "path": "^0.12.7"
   },

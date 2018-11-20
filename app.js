@@ -7,6 +7,7 @@ const path = require('path');
 app.set('view engine', 'njk');
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, 'app/assets')));
+app.use('/nhsuk-frontend', express.static(path.join(__dirname, '/node_modules/nhsuk-frontend/packages')));
 
 var appViews = [
   path.join(__dirname, '/app/views/')
