@@ -21,41 +21,6 @@
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-three-quarters">
         <!-- Component -->
-        <div id="autocomplete"></div>
-        <script type="text/javascript" src="https://unpkg.com/accessible-autocomplete@1.6.2/dist/accessible-autocomplete.min.js"></script>
-        <script type="text/javascript">
-          var searchTerm = "Cancer"
-          var request = new XMLHttpRequest();
-          request.open('GET', 'https://nhs.funnelback.co.uk/s/suggest.json?collection=nhs-meta&partial_query=' + searchTerm + '&sort=0&fmt=json++&profile=&show=10', true);
-
-          request.onload = function() {
-            if (request.status >= 200 && request.status < 400) {
-              // Success!
-              var data = JSON.parse(request.responseText);
-              console.log(data);
-            } else {
-              // We reached our target server, but it returned an error
-              console.log("No suggestions");
-            }
-          };
-
-          request.onerror = function() {
-            // There was a connection error of some sort
-          };
-
-        request.send();
-
-          var countries = [
-          'Afghanistan'
-          ]
-          var element = document.querySelector('#autocomplete');
-          accessibleAutocomplete({
-            element: element,
-            id: 'autocomplete-class',
-            source: countries
-          });
-        </script>
-
       </div>
     </div>
 

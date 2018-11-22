@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
-    "nhsuk-frontend": "^0.1.4",
+    "nhsuk-frontend": "^0.1.6",
     "nunjucks": "^3.1.4",
     "path": "^0.12.7"
   },
