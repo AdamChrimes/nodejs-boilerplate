@@ -16,7 +16,7 @@
     "nuke": "npm run clean && rm -rf node_modules/",
     "postinstall": "npm run build",
     "start": "node app",
-    "test": "mocha --require @babel/register test/**/*.spec.js && npm run lint",
+    "test": "mocha --require @babel/register test/**/*.spec.js",
     "prewatch": "npm run build:css",
     "watch": "concurrently \"npm run watch:scss\" \"npm run watch:js\" \"npm run watch:assets\"  \"npm start\"",
     "watch:scss": "npm run build:css -- -w",
